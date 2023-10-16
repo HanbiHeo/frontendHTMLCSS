@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<input>
+    <!--select 박스 (=콤보박스)-->
+    <!--optgroup 태그 사용-->
+    <form action="#">
+        <fieldset>
+            <legend>개인 정보 입력</legend>
+            <label for="city">지역</label>
+            <select id="city" size="4" multiple>
+                <optgroup label="서울 특별시">
+                    <option value="강북구">강북구</option>
+                    <option value="강남구">강남구</option>
+                    <option value="서초구" selected>서초구</option>
+                </optgroup>
+                <optgroup label="경기 성남시">
+                    <option value="중원구">중원구</option>
+                    <option value="분당구">분당구</option>
+                </optgroup>
+            </select>
+            <input type="reset" value="등록">
+        </fieldset>
+    </form>
+
+    <!--button-->
+
+    <form action="">
+        <button type="submit">
+            <img src="../images/facebook.png" alt="facebookbutton" width="15px">
+            페이스북에 등록하기
+        </button>
+    </form>
+
+    <input type="text" disabled>
+    <button type="button" disabled>비활성화 버튼</button>
+    <br/>
+    <input type="text" readonly placeholder="읽기전용. 입력불가">
+    <br/>
+
+    <!--checked속성 : 여러개의 아이템을 선택할 때 사용-->
+    <form action="#">
+        <fieldset>
+            <legend>과일 선택</legend>
+            <input type="checkbox" id="banana" name="fruit" value="banana">
+            <label for="banana">바나나</label>
+            <input type="checkbox" id="apple" name="fruit" value="apple">
+            <label for="apple">사과</label>
+            <input type="checkbox" id="kiwi" name="fruit" value="kiwi">
+            <label for="kiwi">키위</label>
+            <input type="checkbox" id="orange" name="fruit" value="orange">
+            <label for="orange">오렌지</label>
+        </fieldset>
+    </form>
+
+    <form action="#">
+        <input type="tel" placeholder="전화번호를 입력 하세요" required>
+        <input type="submit" value="전송">
+    </form>
+
+</body>
+</html>

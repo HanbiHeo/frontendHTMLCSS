@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 그리드 라인을 이용한 배치 -->
+    <style>
+        .grid-container{
+            display: grid;
+            gap: 1px;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5,100px);
+            color: white;
+            font-size: 150%;
+            font-weight: 700;
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-icon{
+            background-color: yellowgreen;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        .grid-header {
+            background-color: orange;
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+        .grid-sidebar {
+            background-color: rgb(90, 220, 176);
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+        .grid-content {
+            background-color: rgb(216, 205, 106);
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+        .grid-footer {
+            background-color: rgb(200, 160, 221);
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item grid-icon">icon</div>
+        <div class="item grid-header">header</div>
+        <div class="item grid-sidebar">sidebar</div>
+        <div class="item grid-content">content</div>
+        <div class="item grid-footer">footer</div>
+    </div>
+</body>
+</html>

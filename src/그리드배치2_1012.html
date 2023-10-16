@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            width: 700px;
+            display: grid;
+            gap: 2px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(7, 100px);
+            grid-template-areas: 
+                "icon . header header "
+                ". content content content"
+                "sidebar content content content"
+                "sidebar content content content"
+                "sidebar content content content"
+                ". content content content"
+                "footer footer footer ."
+            ;
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-icon{
+            grid-area: icon;
+            background-color: yellowgreen;
+        }
+        .grid-header {
+            grid-area: header;
+            background-color: orange;
+        }
+        .grid-sidebar {
+            grid-area: sidebar;
+            background-color: rgb(99, 226, 184);
+        }
+        .grid-content {
+            grid-area: content;
+            background-color: rgb(246, 239, 177);
+        }
+        .grid-footer {
+            grid-area: footer;
+            background-color: rgb(200, 160, 221);
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item grid-header">header</div>
+        <div class="item grid-icon">icon</div>
+        <div class="item grid-sidebar">sidebar</div>
+        <div class="item grid-content">content</div>
+        <div class="item grid-footer">footer</div>
+    </div>
+</body>
+</html>

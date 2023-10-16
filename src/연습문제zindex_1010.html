@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .parent{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: royalblue;
+        }
+        .children{
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            border: 4px dashed orangered;
+        }
+        .box1{
+            position: relative;
+        }
+        .box2{
+            position: absolute;
+            left:50px;
+            top:50px;
+        }
+        .box3{
+            z-index: 1;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="children box1"></div>
+        <div class="children box2"></div>
+        <div class="children box3"></div>
+    </div>
+</body>
+</html>

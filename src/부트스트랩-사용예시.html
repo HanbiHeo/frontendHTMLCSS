@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- 부트스트랩을 쓰기 위한 코드 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">Navbar</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Features</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Pricing</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link disabled" aria-disabled="true">Disabled</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+	  <nav class="navbar bg-body-tertiary">
+		<form class="container-fluid">
+		  <div class="input-group">
+			<span class="input-group-text" id="basic-addon1">@</span>
+			<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+		  </div>
+		</form>
+	  </nav>
+    <div class="container">
+		<h1>회원가입</h1>
+		<form>
+			<div class="form-group">
+				<label for="inputName">이름</label>
+				<input type="text" class="form-control" id="inputName" placeholder="이름을 입력하세요">
+			</div>
+			<div class="form-group">
+				<label for="inputEmail">이메일</label>
+				<input type="email" class="form-control" id="inputEmail" placeholder="이메일을 입력하세요">
+			</div>
+			<div class="form-group">
+				<label for="inputPassword">비밀번호</label>
+				<input type="password" class="form-control" id="inputPassword" placeholder="비밀번호를 입력하세요">
+			</div>
+			<div class="form-group">
+				<label for="inputPassword2">비밀번호 확인</label>
+				<input type="password" class="form-control" id="inputPassword2" placeholder="비밀번호를 다시 입력하세요">
+			</div>
+            <br>
+			<button type="submit" class="btn btn-primary">회원가입</button>
+		</form>
+	</div>
+    
+    <!-- 자바스크립트 : html의 돔이 만들어 진 후 돔제어를 위해 들어가기때문에, 통상적으로 제일 밑부분에 배치한다. 동작이 걸려있기 때문에 부트스트랩을 쓸 때 링크 가져와야함. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

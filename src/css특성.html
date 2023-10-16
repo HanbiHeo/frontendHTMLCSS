@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: "Nanum Gothic",sans-serif;
+        }
+        .parent{
+            font-size: 16px;
+            font-weight: 400;
+            font-style: oblique;
+            /*키워드 표기법 : 150여개의 컬러 이름이 있음*/
+            background-color: rgb(154, 255, 169);
+            color: rgb(0, 0, 0);
+        }
+        .child{
+            font-size: 120%;
+            font-weight: 400;
+            background-color: rgb(255, 0, 0, 0.6);
+        }
+        .child-to-child{
+            font-size: 120%;
+            /*네번째 값은 투명도를 의미 : 1에 가까우면 불투명, 0에 가까우면 투명*/
+            background-color: rgba(229, 255, 0, 0.5);
+        }
+        h1{
+            color: #f00;
+        }
+        span{
+            /*소문자 크기의 대문자를 만듦*/
+            font-variant: small-caps;
+            text-align: center;
+        }
+        .car-name{
+            text-align: justify;
+            text-decoration: line-through;
+        }
+        a{
+            text-decoration: none;
+        }
+        .test-text{
+            /*자간 : 글자사이 간격 조정*/
+            letter-spacing: 5px;
+            /**/
+            line-height: 2em;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(122, 189, 122);
+            /*text-shadow: 가로거리 세로거리 번짐정도 색상*/
+            text-shadow: 1px 1px 1px #002413;
+        }
+
+        /* h3{
+            /* display: inline; 인라인 일 때 센터정렬 안되는 이유 :  영역이 글자값(inline)까지만 적용되기 때문에 정렬되지 않음
+            text-align: center;
+        } */
+
+        .shadow1{
+            color: red;
+            text-shadow: 1px 1px black;
+        }
+        .shadow2{
+            text-shadow: 5px 5px 3px #ffa500;
+        }
+        .shadow3{
+            text-shadow: 7px -7px 20px #000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>부모의 폰트크기</p>
+        <div class="child">
+            <p>자식의 폰트크기</p>
+            <div class="child-to-child">
+                <p>자식의 자식 폰트크기</p>
+            </div>
+        </div>
+    </div>
+    <div class="car-name">
+        <!-- <span>hex값으로 색상을 지정합니다</span> -->
+        <span>카이앤</span>
+        <span>파나메라</span>
+        <span>타이칸</span>
+    </div>
+
+    <a href="http://naver.com">네이버</a>
+    <p class="test-text">행복의 한 쪽 문이 닫히면 다른 쪽 문이 열린다. 그러나 흔히 우리는 닫혀진 문을 오랫동안 보기 때문에 우리를 위해 열려 있는 문을 보지 못한다.</p>
+    <h2 class="shadow1">HTML</h2>
+    <h2 class="shadow2">CSS</h2>
+    <h2 class="shadow3">자바스크립트</h2>
+</body>
+</html>

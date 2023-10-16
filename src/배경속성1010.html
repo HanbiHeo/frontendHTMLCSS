@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* background-color:<색상값> */
+        /* background-image:<이미지 주소> */
+        div{ 
+            background-color: red;
+        }
+        .bg {
+            /*원본 이미지보다 2배 크게 설정, 반복 안되게 하려면 no-repeat*/
+            width: 180px;
+            height: 210px;
+            border: 1px solid black;
+            background-image: url('../images/7.jpg');
+            background-repeat: no-repeat;
+            /* size 속성 : 
+            auto(기본속성)
+            cover(전체 영역 다 채우도록 확대 또는 축소_비율 안맞으면 이미지 잘림)
+            contain(요소 내부에 딱 맞게 확대 또는 축소_비율 안맞으면 공백 생김) */
+            background-size: cover;
+            background-position: top;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="bg"> </div>
+</body>
+</html>

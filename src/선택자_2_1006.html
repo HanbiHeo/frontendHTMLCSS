@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        li:first-child{
+            color: rgb(157, 0, 255);
+        }
+        li:last-child{
+            color: blue;
+        }
+
+        /*부모의 모든 자식 요소 중 n번째 자식 요소 맞으면 선택 */
+        /* p:nth-child(2){
+            color: rgb(200, 123, 29);
+            font-size: 2em;
+        } */
+
+        /*부모 요소의 자식 요소 중 n번째로 등장하는 요소 선택*/
+        p:nth-of-type(2){
+            color:brown;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <!-- 구조적 가상 클래스 선택자 : 요소의 부모, 자식, 형제 인접 요소를 기준으로 스타일을 적용 -->
+    <!-- <ul>
+        <li>test 1😭</li>
+        <li>test 2</li>
+        <li>test 3</li>
+        <li>test 4</li>
+        <li>test 5😭</li>
+    </ul> -->
+
+    <p>그랜져🥸</p>
+    <div>
+        <p>싼타페🐔</p>
+        <span>쏘나타🥯</span>
+        <p>쏘렌토🥸</p>
+    </div>
+    <div>
+        <p>투싼🐔</p>
+        <span>모닝🥯</span>
+        <p>스포티지🥸</p>
+    </div>
+</body>
+</html>

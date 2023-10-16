@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--css, scss 스타일을 외부로 뽑아서 쓰는 방법-->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+    /*태그 선택자 : 가급적 쓰지 않는것이 좋다*/
+    *{
+        color: orange;
+        font-weight: 600;
+    }
+    /*클래스 선택자 : 태그에 class키워드, .클래스명 { }*/
+    .accent {
+        border: 1px solid #333;
+        padding: 5px;
+        color: red;
+    } 
+    /*그룹 선택자 : 여러 선택자를 하나로 묶음(,)로 선택자간의 구분을 지어야함.*/
+    p, .accent{
+        color: rgb(102, 102, 102);
+    }
+    .bg{
+        background-color: #ddd;
+    }
+    /*아이디 선택자 : 한 화면에 한번만. 태그에 id 키워드, #클래스명 { }*/
+    #container {
+        width: calc(100vw - 60px);
+        margin: 10px auto;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+    /*기본 속성 선택자 : */
+    a[href] {
+        font-size: 2em;
+        color:rgb(14, 190, 14);
+        text-decoration: none;
+    }
+    a[target="_blank"]{
+        background-color: rgb(214, 255, 241);
+        color: rgb(61, 56, 0);
+    }
+    /*자식 선택자 : 부모선택자 > 자식선택자-> 바로 하위의 자식선택자만 고름*/
+    .box > p {
+        font-size: 1.2em;
+        color:aquamarine;
+        font-weight: 900;
+    }
+    /*인접 형제 선택자 : '+'기호를 사용해서 지정된 요소의 다음 형제 요소를 선택
+    h1 다음에 나오는 h2만 선택한다는 제약조건*/
+    h1 + h2 {
+        color: #000;
+    }
+    /*일반 형제 선택자 : 특정요소 이후에 나오는 모든 현재 요소 선택
+    h3 이후에 나오는 모든 h1*/
+    h3 ~ h1 {
+        color: cornflowerblue;
+    }
+    /*가상 요소 선택자 : 요소의 특정 부분에 스타일을 적용하는 방법
+    (:)콜론으로 시작하여 요소의 내용이 아닌, 요소의 특정부분에 스타일 적용*/
+    h1::before {
+        content: "★";
+        color: rgb(151, 255, 95);
+    }
+    h1::after {
+        content: "😊😶😶‍🌫️😶😊(◉Θ◉)"
+    }
+    /*가상 클래스 선택자 : 요소의 상태를 이용해 선택자를 지정하는 방법
+    link : 한번도 방문하지 않은 사이트 링크!!
+    visited : 한번이라도 방문한 사이트 링크!!*/
+    a:link {
+        color: #ff9696;
+    }
+    a:visited {
+        color: rgb(116, 116, 255);
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 class="accent bg">레드향</h1>
+        <p>껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+        <p>레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+        <p>비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+    </div>
+    <a href="http://naver.com">네이버</a><br/>
+    <a href="http://kakao.com" target="_blank">카카오</a>
+
+    <div class="box">
+        <p>아이폰 15 Pro Max</p>
+        <div>
+            <p>아이폰 15 Mini</p>
+        </div>
+        <p>아이패드</p>
+    </div>
+    <div>
+        <h1>제목 1번 입니다</h1>
+        <h2>제목 2번 입니다</h2>
+        <h3>제목 3번 입니다</h3>
+        <h1>제목 ------- 끝</h1>
+        <h4>???????</h4>
+        <h2>111111</h2>
+        <h1>2222222</h1>
+
+    </div>
+</body>
+</html>

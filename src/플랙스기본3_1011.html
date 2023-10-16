@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            /* flex-direction 플랙스의 주축방향을 결정 */
+            flex-direction: row;
+            /* flex-warp : nowrap -> 아이템이 영역을 벗어날 때 어떻게 처리할 지 결정. 내부의 크기 안에서 적절히 찌그러짐. 기본속성, 내용이 틀어지기 전까지 변형. */
+            /* flex-wrap: wrap; */
+            flex-flow: row wrap;
+            /* 주축에 대한 정렬 방법 */
+            justify-content: space-evenly;
+
+            /* 교차축에 대한 정렬 */
+            align-items: center;
+            
+            background-color: skyblue;
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .flex-item{
+            width: 80px;
+            /* 높이설정을 하지 않으면 전체를 채우는 특성을 가지고 있음, 정렬이 들어가면 글씨크기만큼 */
+            height: 60px;
+            margin: 2px;
+            /* text-align: center; */
+            
+            /* 글자 가운데 역할 해주는 방법 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid darkcyan;
+            color: white;
+            background-color: darkblue;
+        }
+        /* 2n 은 짝수가 선택된다 */
+        .flex-item:nth-child(2n) {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <idv class="flex-item">item1</idv>
+        <idv class="flex-item">item2</idv>
+        <idv class="flex-item">item3</idv>
+        <idv class="flex-item">item4</idv>
+        <idv class="flex-item">item5</idv>
+        <idv class="flex-item">item6</idv>
+    </div>
+</body>
+</html>
